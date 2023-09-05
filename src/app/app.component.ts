@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { Country } from './models/country.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.sass'],
 })
 export class AppComponent {
-  title = 'starting-project';
+  countries: Country[] = [new Country(), new Country(), new Country()];
 }

@@ -1,0 +1,26 @@
+<div class="top-bar">
+  <span class="top-bar-label">Where in the world?</span>
+  <div class="dark-mode-container">
+    <button class="icon-button">🌙</button>
+    <span class="dark-mode-label">Dark Mode</span>
+  </div>
+</div>
+
+<div class="search-bar">
+  <span class="search-icon-container">🔍</span>
+  <input
+    class="text-input"
+    type="text"
+    name="country-name"
+    placeholder="search for a country..."
+  />
+</div>
+
+<select class="filter-control">
+  <option>first option</option>
+  <option>second option</option>
+</select>
+
+<div class="country-list-item-container" *ngFor="let country of countries">
+  <app-country-list-item [model]="country"></app-country-list-item>
+</div>
