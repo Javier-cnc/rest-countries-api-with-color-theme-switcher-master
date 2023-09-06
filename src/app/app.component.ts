@@ -6,6 +6,4 @@ import { Country } from './models/country.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass'],
 })
-export class AppComponent {
-  countries: Country[] = [new Country(), new Country(), new Country()];
-}
+export class AppComponent {}

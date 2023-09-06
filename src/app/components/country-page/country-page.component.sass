@@ -1,0 +1,36 @@
+
+@use '../../../variables/effects' as e
+@use '../../../variables/fonts' as f
+
+.flag
+  width: 100%
+.btn
+  padding-left: 30px
+  padding-right: 30px
+  padding-top: 10px
+  padding-bottom: 10px
+  margin-bottom: 20px
+  background: none
+  border: none
+  box-shadow: e.$shadow-effect
+
+.name-label
+  margin-bottom: 30px !important
+  font-size: f.$large-font
+
+.text-block
+  margin-bottom: 10px
+
+.border-countries-container
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-top: 10px
+.border-country-item
+  box-shadow: e.$shadow-effect
+  flex: 0 0 30%
+  margin-bottom: 10px
+  padding-top: 5px
+  padding-bottom: 5px
+  font-size: f.$regular-font
+  text-align: center

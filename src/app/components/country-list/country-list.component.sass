@@ -1,0 +1,47 @@
+@use '../../../variables/colors' as c
+@use '../../../variables/effects' as e
+
+.search-bar
+  margin-top: 20px
+  margin-left: 15px
+  margin-right: 15px
+  margin-bottom: 30px
+  background-color: c.$regular-white-color
+  padding: 15px
+  display: flex
+  border-radius: 5px
+  box-shadow: e.$shadow-effect
+
+.search-icon-container
+  margin-right: 20px
+  margin-left: 20px
+
+.filter-control
+  border: none
+  outline: none
+  background-color: c.$regular-white-color
+  padding: 0px
+  width: 200px
+  border: solid 15px c.$regular-white-color
+  border-left-width: 20px
+  border-right-width: 20px
+  margin-left: 15px
+
+.text-input
+  flex-grow: 1
+  border: none
+  outline: none
+  background-color: c.$regular-white-color
+
+.filter-control
+  box-shadow: e.$shadow-effect
+
+.country-list-item-container
+  margin: 40px
+  box-shadow: e.$shadow-effect
+  background-color: c.$regular-white-color
+
+.country-list-item-container:hover
+  transform: scale(1.05)
+  transform-origin: center
+  cursor: pointer
