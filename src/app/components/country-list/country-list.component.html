@@ -1,22 +1,30 @@
-<div class="search-bar">
-  <span class="search-icon-container">🔍</span>
-  <input
-    class="text-input"
-    type="text"
-    name="country-name"
-    placeholder="search for a country..."
-  />
-</div>
+<div class="global-container">
+  <div class="search-bar-container">
+    <div class="search-bar">
+      <span class="search-icon-container">🔍</span>
+      <input
+        class="text-input"
+        type="text"
+        name="country-name"
+        placeholder="search for a country..."
+      />
+    </div>
 
-<select class="filter-control">
-  <option>first option</option>
-  <option>second option</option>
-</select>
+    <select class="filter-control">
+      <option>first option</option>
+      <option>second option</option>
+    </select>
+  </div>
 
-<div
-  class="country-list-item-container"
-  [routerLink]="'/countryDetails/' + country.name"
-  *ngFor="let country of countries"
->
-  <app-country-list-item [model]="country"></app-country-list-item>
+  <div class="country-items-container">
+    <div
+      class="country-list-item-container"
+      [routerLink]="'/countryDetails/' + country.name"
+      *ngFor="let country of countries"
+    >
+      <div class="country-list-item-shadow-effect">
+        <app-country-list-item [model]="country"></app-country-list-item>
+      </div>
+    </div>
+  </div>
 </div>

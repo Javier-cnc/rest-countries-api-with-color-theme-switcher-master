@@ -4,12 +4,15 @@
 
 .flag
   width: 100%
+  overflow: hidden
+  object-fit: contain
 .btn
   padding-left: 30px
   padding-right: 30px
   padding-top: 10px
   padding-bottom: 10px
   margin-bottom: 20px
+  margin-top: 20px
   background: none
   border: none
   box-shadow: e.$shadow-effect
@@ -26,6 +29,7 @@
   flex-wrap: wrap
   justify-content: space-between
   margin-top: 10px
+  margin-bottom: 50px
 .border-country-item
   box-shadow: e.$shadow-effect
   flex: 0 0 30%
@@ -34,3 +38,33 @@
   padding-bottom: 5px
   font-size: f.$regular-font
   text-align: center
+
+.description-block
+  margin-top: 50px !important
+
+@media (min-width: 500px)
+  .details-global-container
+    display: flex
+  .details-item
+    flex: 0 0 50%
+  .description-blocks-container
+    display: flex
+
+  .description-block
+    flex: 1 1 0
+  .borders-container
+    margin-top: 50px
+  .description-container
+    padding-left: 60px
+    padding-right: 30px
+    box-sizing: border-box
+  .border-countries-container
+    flex-grow: 1
+    flex-wrap: wrap
+    justify-content: start
+  .border-country-item
+    flex: 0 0 auto
+    margin: 10px
+    width: 80px
+
+
