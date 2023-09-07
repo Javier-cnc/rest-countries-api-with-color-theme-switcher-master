@@ -1,11 +1,17 @@
 @use '../../../variables/colors' as c
 @use '../../../variables/effects' as e
 
+select:required:invalid
+  color: #b7b7b7
+
+option[value=""][disabled]
+  display: none
+
+option
+  color: #000
 
 .global-container
   margin: 10px
-  max-width: 1440px !important
-
 
 .search-bar
   margin-top: 20px
@@ -60,12 +66,12 @@
 @media (min-width: 500px)
   .country-items-container
     flex-direction: row
-
-@media (min-width: 500px) and (max-width: 900px)
   .search-bar-container
     display: flex
     justify-content: space-between
     align-items: center
+
+@media (min-width: 500px) and (max-width: 900px)
   .filter-control
     margin: 0px
   .country-list-item-container

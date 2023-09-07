@@ -6,6 +6,7 @@ import { CountryListItemComponent } from './components/country-list-item/country
 import { AppRoutingModule } from './app-routing.module';
 import { CountryPageComponent } from './components/country-page/country-page.component';
 import { CountryListComponent } from './components/country-list/country-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { CountryListComponent } from './components/country-list/country-list.com
     CountryPageComponent,
     CountryListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
