@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CountryListItemComponent } from './components/country-list-item/country-list-item.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,13 +12,10 @@ import { CountryListComponent } from './components/country-list/country-list.com
     AppComponent,
     CountryListItemComponent,
     CountryPageComponent,
-    CountryListComponent
+    CountryListComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

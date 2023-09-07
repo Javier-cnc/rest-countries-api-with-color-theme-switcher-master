@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Country } from 'src/app/models/country.model';
+import { RepositoryService } from 'src/app/services/repository.service';
 
 @Component({
   selector: 'app-country-list',
@@ -7,11 +8,20 @@ import { Country } from 'src/app/models/country.model';
   styleUrls: ['./country-list.component.sass'],
 })
 export class CountryListComponent {
-  countries: Country[];
+  countries: Country[] = [];
 
-  constructor() {
+  constructor(private repo: RepositoryService) {
     // set initial value
     // TODO: Change this using a request to the server...
-    this.countries = [new Country(), new Country(), new Country()];
+    repo.getAllCountries().subscribe({
+      next: (result) => {
+        this.countries = result;
+        console.log(this.countries);
+      },
+      error: (err) => {
+        console.log('The request operation to the server failed: ' + err);
+      },
+      complete: () => {},
+    });
   }
 }

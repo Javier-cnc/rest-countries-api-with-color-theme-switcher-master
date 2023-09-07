@@ -19,7 +19,7 @@
   <div class="country-items-container">
     <div
       class="country-list-item-container"
-      [routerLink]="'/countryDetails/' + country.name"
+      [routerLink]="'/countryDetails/' + country.name.common"
       *ngFor="let country of countries"
     >
       <div class="country-list-item-shadow-effect">

@@ -1,7 +1,9 @@
 <div class="global-container">
-  <img class="country-image" [src]="model.flag" alt="flag image" />
+  <div class="image-container">
+    <img class="country-image" [src]="model.flags.svg" alt="flag image" />
+  </div>
   <div class="description-container">
-    <span class="country-label">{{ model.name }}</span>
+    <span class="country-label">{{ model.name.common }}</span>
     <span class="text-block"
       >Population: <span class="text-value">{{ model.population }}</span></span
     >

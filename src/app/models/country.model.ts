@@ -2,10 +2,19 @@ export class Country {
   population: number;
   region: string;
   capital: string;
-  name: string;
+  name: {
+    common: string;
+    official: string;
+    nativeName: {
+      spa: {
+        common: string;
+        official: string;
+      };
+    };
+  };
   nativeName: string;
   subregion: string;
-  topLevelDomain: string[];
+  tld: string[];
   currencies: { code: string; name: string; symbol: string }[];
   languages: {
     iso639_1: string;
@@ -14,12 +23,25 @@ export class Country {
     nativeName: string;
   }[];
   borders: string[];
-  flag: string;
+  flags: {
+    svg: string;
+    alt: string;
+    png: string;
+  };
 
   constructor() {
     // #region Set default value
-    this.name = 'Afghanistan';
-    this.topLevelDomain = ['.af'];
+    this.name = {
+      common: 'Afganistan',
+      official: 'Afganistan',
+      nativeName: {
+        spa: {
+          common: 'Afganistan',
+          official: 'Afganistan',
+        },
+      },
+    };
+    this.tld = ['.af'];
     this.capital = 'Kabul';
     this.subregion = 'Southern Asia';
     this.region = 'Asia';
@@ -53,8 +75,11 @@ export class Country {
         nativeName: 'Türkmen',
       },
     ];
-    this.flag =
-      'https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg';
+    this.flags = {
+      alt: 'testing text',
+      svg: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg',
+      png: '',
+    };
     // #endregion
   }
 }
