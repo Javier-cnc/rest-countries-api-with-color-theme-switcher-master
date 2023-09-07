@@ -1,60 +1,62 @@
-<button class="btn" [routerLink]="'/index'">⬅ Back</button>
-<div class="details-global-container">
-  <img class="flag details-item" [src]="model?.flags?.svg" />
-  <div class="description-container details-item">
-    <span class="text-block name-label">{{ model?.name?.common }}</span>
-    <div class="description-blocks-container">
-      <div class="description-block">
-        <span class="text-block"
-          >Native Name:
-          <span class="text-value">{{ getNativeName() }}</span></span
-        >
-        <span class="text-block"
-          >Population:
-          <span class="text-value">{{ model?.population }}</span></span
-        >
-        <span class="text-block"
-          >Region: <span class="text-value">{{ model?.region }}</span></span
-        >
-        <span class="text-block"
-          >Sub Region:
-          <span class="text-value">{{ model?.subregion }}</span></span
-        >
-        <span class="text-block"
-          >Capital: <span class="text-value">{{ model?.capital }}</span></span
-        >
+<div class="global-container">
+  <button class="btn" [routerLink]="'/index'">⬅ Back</button>
+  <div class="details-global-container">
+    <img class="flag details-item" [src]="model?.flags?.svg" />
+    <div class="description-container details-item">
+      <span class="text-block name-label">{{ model?.name?.common }}</span>
+      <div class="description-blocks-container">
+        <div class="description-block">
+          <span class="text-block"
+            >Native Name:
+            <span class="text-value">{{ getNativeName() }}</span></span
+          >
+          <span class="text-block"
+            >Population:
+            <span class="text-value">{{ model?.population }}</span></span
+          >
+          <span class="text-block"
+            >Region: <span class="text-value">{{ model?.region }}</span></span
+          >
+          <span class="text-block"
+            >Sub Region:
+            <span class="text-value">{{ model?.subregion }}</span></span
+          >
+          <span class="text-block"
+            >Capital: <span class="text-value">{{ model?.capital }}</span></span
+          >
+        </div>
+        <div class="description-block">
+          <span class="text-block"
+            >Top Level Domain:
+            <span class="text-value">{{ model?.tld }}</span></span
+          >
+          <span class="text-block"
+            >Currencies:
+            <span
+              class="text-value"
+              *ngFor="let currency of getObjectsValue(model?.currencies)"
+              >{{ currency.name }},</span
+            ></span
+          >
+          <span class="text-block"
+            >Languages:
+            <span
+              class="text-value"
+              *ngFor="let language of getObjectsValue(model?.languages)"
+              >{{ language }},
+            </span></span
+          >
+        </div>
       </div>
-      <div class="description-block">
-        <span class="text-block"
-          >Top Level Domain:
-          <span class="text-value">{{ model?.tld }}</span></span
-        >
-        <span class="text-block"
-          >Currencies:
+      <div class="borders-container">
+        <span class="text-block">Border Countries:</span>
+        <div class="border-countries-container">
           <span
-            class="text-value"
-            *ngFor="let currency of getObjectsValue(model?.currencies)"
-            >{{ currency.name }},</span
-          ></span
-        >
-        <span class="text-block"
-          >Languages:
-          <span
-            class="text-value"
-            *ngFor="let language of getObjectsValue(model?.languages)"
-            >{{ language }},
-          </span></span
-        >
-      </div>
-    </div>
-    <div class="borders-container">
-      <span class="text-block">Border Countries:</span>
-      <div class="border-countries-container">
-        <span
-          class="border-country-item"
-          *ngFor="let border of model?.borders"
-          >{{ border }}</span
-        >
+            class="border-country-item"
+            *ngFor="let border of model?.borders"
+            >{{ border }}</span
+          >
+        </div>
       </div>
     </div>
   </div>
