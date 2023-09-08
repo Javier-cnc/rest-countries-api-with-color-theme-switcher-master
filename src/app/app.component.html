@@ -2,7 +2,11 @@
   <span class="top-bar-label">Where in the world?</span>
   <div class="dark-mode-container">
     <button (click)="toggleDarkMode()" class="btn">
-      <span class="icon-button">🌙</span>
+      <i
+        class="icon-button"
+        [ngClass]="darkMode ? 'material-icons' : 'material-icons-outlined'"
+        >bedtime</i
+      >
       <span class="dark-mode-label">Dark Mode</span>
     </button>
   </div>
