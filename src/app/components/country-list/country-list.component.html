@@ -1,6 +1,6 @@
 <div class="global-container">
   <div class="search-bar-container">
-    <div class="search-bar">
+    <div class="search-bar" [class.dark-mode]="darkMode">
       <span class="search-icon-container">🔍</span>
       <input
         #input
@@ -12,7 +12,12 @@
       />
     </div>
 
-    <select class="filter-control" (change)="filterByRegion($event)" required>
+    <select
+      class="filter-control"
+      [class.dark-mode]="darkMode"
+      (change)="filterByRegion($event)"
+      required
+    >
       <option value="" disabled selected>filter by region</option>
       <option value="Americas">Americas</option>
       <option value="Asia">Asia</option>
@@ -28,7 +33,7 @@
       [routerLink]="'/countryDetails/' + country.name.common"
       *ngFor="let country of filteredCountries"
     >
-      <div class="country-list-item-shadow-effect">
+      <div class="country-list-item-shadow-effect" [class.dark-mode]="darkMode">
         <app-country-list-item [model]="country"></app-country-list-item>
       </div>
     </div>

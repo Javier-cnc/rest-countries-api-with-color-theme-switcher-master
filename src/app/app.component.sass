@@ -9,15 +9,20 @@
 .top-bar-label
   font-weight: bolder
   font-size: f.$medium-font
+  margin-left: 20px
 
-.icon-button
+.btn
   border: none
   background: none
+  cursor: pointer
+  color: inherit
+
+.icon-button
+  display: relative
+  margin-right: 30px
   transform: rotate(90deg)
-  transform-origin: center
   transition-property: transform
   transition-duration: 300ms
-  cursor: pointer
 
 .icon-button:hover
   transform: rotate(0deg)
@@ -35,9 +40,25 @@
   margin: 0px
   justify-content: space-between
 
+.top-bar.dark-mode
+  background-color: c.$dark-blue-color
+  color: white
+
 .page-container
-  margin-left: 20px
-  margin-right: 20px
+  padding-left: 20px
+  padding-right: 20px
   display: flex
   justify-content: center
   align-items: center
+.page-container.dark-mode
+  background-color: c.$verydark-blue-color
+  color: white
+.dark-mode-label
+  color: inherit
+
+.dark-mode-container
+  color: inherit
+
+
+body
+  background-color: red !important

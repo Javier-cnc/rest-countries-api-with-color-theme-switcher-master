@@ -22,6 +22,14 @@ option
   border-radius: 5px
   box-shadow: e.$shadow-effect
 
+.search-bar.dark-mode
+  box-shadow: none !important
+  background-color: c.$dark-blue-color
+  color: white
+
+.search-bar input
+  background-color: inherit
+  color: inherit
 .search-icon-container
   margin-right: 20px
   margin-left: 20px
@@ -36,6 +44,16 @@ option
   border-left-width: 20px
   border-right-width: 20px
   margin-bottom: 20px
+  box-shadow: e.$shadow-effect
+
+.filter-control.dark-mode
+  box-shadow: none !important
+  background-color: c.$dark-blue-color
+  border-color: c.$dark-blue-color
+  color: white !important
+
+.filter-control.dark-mode option
+  color: white
 
 .text-input
   flex-grow: 1
@@ -43,8 +61,6 @@ option
   outline: none
   background-color: c.$regular-white-color
 
-.filter-control
-  box-shadow: e.$shadow-effect
 
 .country-items-container
   display: flex
@@ -52,13 +68,16 @@ option
   flex-wrap: wrap
 
 .country-list-item-container
-  background-color: c.$regular-white-color
+  background-color: inherit
   padding: 10px
   box-sizing: border-box
 
 .country-list-item-shadow-effect
   box-shadow: e.$shadow-effect
-
+  border-radius: 10px
+  overflow: hidden
+.country-list-item-shadow-effect.dark-mode
+  box-shadow: none !important
 
 .country-list-item-container:hover
   cursor: pointer

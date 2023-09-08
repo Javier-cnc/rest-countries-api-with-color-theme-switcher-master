@@ -1,6 +1,7 @@
 
 @use '../../../variables/effects' as e
 @use '../../../variables/fonts' as f
+@use '../../../variables/_colors' as c
 
 
 .flag
@@ -18,6 +19,11 @@
   background: none
   border: none
   box-shadow: e.$shadow-effect
+  color: inherit
+
+.btn.dark-mode
+  box-shadow: none !important
+  background-color: c.$dark-blue-color
 
 .name-label
   margin-bottom: 30px !important
@@ -41,6 +47,9 @@
   padding-bottom: 5px
   font-size: f.$regular-font
   text-align: center
+.border-country-item.dark-mode
+  box-shadow: none !important
+  background-color: c.$dark-blue-color
 
 .description-block
   margin-top: 50px !important

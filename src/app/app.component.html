@@ -1,11 +1,13 @@
-<div class="top-bar">
+<div [class.dark-mode]="darkMode" class="top-bar">
   <span class="top-bar-label">Where in the world?</span>
   <div class="dark-mode-container">
-    <button class="icon-button">🌙</button>
-    <span class="dark-mode-label">Dark Mode</span>
+    <button (click)="toggleDarkMode()" class="btn">
+      <span class="icon-button">🌙</span>
+      <span class="dark-mode-label">Dark Mode</span>
+    </button>
   </div>
 </div>
-<div class="page-container">
+<div [class.dark-mode]="darkMode" class="page-container">
   <div class="central-container">
     <router-outlet></router-outlet>
   </div>

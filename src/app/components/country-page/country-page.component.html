@@ -1,5 +1,7 @@
 <div class="global-container">
-  <button class="btn" [routerLink]="'/index'">⬅ Back</button>
+  <button class="btn" [class.dark-mode]="darkMode" [routerLink]="'/index'">
+    ⬅ Back
+  </button>
   <div class="details-global-container">
     <img class="flag details-item" [src]="model?.flags?.svg" />
     <div class="description-container details-item">
@@ -53,6 +55,7 @@
         <div class="border-countries-container">
           <span
             class="border-country-item"
+            [class.dark-mode]="darkMode"
             *ngFor="let border of model?.borders"
             >{{ border }}</span
           >

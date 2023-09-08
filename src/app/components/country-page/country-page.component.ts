@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Country } from 'src/app/models/country.model';
+import { BackgroundAppService } from 'src/app/services/background-app.service';
 import { RepositoryService } from 'src/app/services/repository.service';
 
 @Component({
@@ -10,10 +11,12 @@ import { RepositoryService } from 'src/app/services/repository.service';
 })
 export class CountryPageComponent {
   model: Country | undefined;
+  darkMode: boolean;
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private repo: RepositoryService
+    private repo: RepositoryService,
+    private appService: BackgroundAppService
   ) {
     // get country name from url to load the corresponding info from the server
     let countryName = activatedRoute.snapshot.params['countryName'];
@@ -30,6 +33,13 @@ export class CountryPageComponent {
         );
       },
       complete: () => {},
+    });
+
+    this.darkMode = appService.DarkMode;
+    appService.DarkModeChanged.subscribe({
+      next: (value) => {
+        this.darkMode = value;
+      },
     });
   }
 
